@@ -10,5 +10,5 @@
    
   </children>
 
-  <script type="text/brightscript" uri="pkg:/components/ifUserLoggedInComponent.brs" />
+  <script type="text/brightscript" uri="pkg:/components/loggedInComponent.brs" />
 </component>
