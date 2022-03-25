@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component name="ifUserLoggedInComponent" extends="commonFields" initialFocus="playButton" >
+
+  <children>
+    
+    <Rectangle width="1920" height="1080" color="#000000">
+        <Button id="logoutButton" text="Log out" translation="[700, 100]" focusedIconUri=" " iconUri=" " />
+        <Button id="playButton" text="Play" translation="[100, 100]" focusedIconUri=" " iconUri=" " />
+    </Rectangle>
+   
+  </children>
+
+  <script type="text/brightscript" uri="pkg:/components/ifUserLoggedInComponent.brs" />
+</component>

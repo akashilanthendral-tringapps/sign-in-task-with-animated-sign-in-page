@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component name="loginComponent" extends="commonFields" >
+
+  <interface>
+  </interface>
+
+  <children>
+    <Rectangle width="1920" height="1080" color="#000000">
+        <Group translation="[500,100]">
+        <MarkupGrid vertFocusAnimationStyle="floatingFocus" numColumns="1" numRows="2" id="myList" itemComponentName="signInItemComponent" itemSpacing="[60,60]"  itemSize = "[ 200, 80 ]">
+        </MarkupGrid>
+        <Label id="usernameOrPasswordWrong" text="" width="200" height="50" translation="[0,350]" />
+        <Button height="40" minWidth="200" maxWidth="200"  id="loginButton" focusedIconUri=" " iconUri=" " translation="[0, 400]">
+          <label height="40" vertAlign="center" color="#00BBBA" horizAlign="center" width="200" text="Log in"/>
+        </Button>
+        </Group>
+    </Rectangle>
+   
+  </children>
+
+  <script type="text/brightscript" uri="pkg:/components/loginComponent.brs" />
+</component>
