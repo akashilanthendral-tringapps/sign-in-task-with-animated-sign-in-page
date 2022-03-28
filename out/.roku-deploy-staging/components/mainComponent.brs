@@ -5,9 +5,10 @@ sub init()
   m.keyboardStackCountt = 0
   userLoggedIn = isUserLoggedIn()
 
+  print "userLoggedIn :"userLoggedIn
   if userLoggedIn = "true"
     m.top.deleteBackStackArray = true
-    m.top.logOut = true
+    'm.top.logOut = false
     m.top.compToPush = "ifUserLoggedInComponent"
   else
 
