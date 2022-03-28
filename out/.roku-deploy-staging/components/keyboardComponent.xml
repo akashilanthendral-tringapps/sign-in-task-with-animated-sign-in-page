@@ -5,8 +5,8 @@
     <children>
         <Rectangle width="1920" height="1080" color="#000000">
             <Group id="keyboardComponentGroup" translation="[0,100]">
-                <keyboard id="keyboard1" translation="[0,0]"/>
-                <button id = "backButton" text="Back" translation="[0,400]" />
+                <keyboard id="keyboard1" translation="[150,0]"/>
+                <button id = "backButton" text="Back" focusedIconUri=" " iconUri=" "  maxWidth="100" translation="[450,400]" />
             </Group>
         </Rectangle>
     </children>

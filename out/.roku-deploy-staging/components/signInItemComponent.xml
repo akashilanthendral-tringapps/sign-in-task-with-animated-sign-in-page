@@ -28,7 +28,7 @@
     <children>
 
         <group id = "item1">
-            <Label id="content1" translation="[0,0]" />
+            <Label id="content1" translation="[40,0]" />
             <texteditbox id="texteditbox1" translation="[0,30]" />
         </group>
 

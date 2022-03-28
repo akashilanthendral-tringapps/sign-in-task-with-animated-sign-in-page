@@ -2,32 +2,18 @@ sub init()
     m.top.setFocus(true)
     m.top.observeField("focusedChild", "setFocusToMyList")
 
-    ' m.logoutButton = m.top.findNode("logoutButton")
     m.playButton = m.top.findNode("playButton")
     m.leftMarkUpGridList = m.top.findNode("leftMarkUpGridList")
     m.leftMarkUpGridListAnimation = m.top.findNode("leftMarkUpGridListAnimation")
     m.leftMarkUpGridListAnimationWhenUnfocused = m.top.findNode("leftMarkUpGridListAnimationWhenUnfocused")
+    m.markUpGridBackgroundWhenFocused = m.top.findNode("markUpGridBackgroundWhenFocused")
+    m.markUpGridBackgroundWhenUnfocused = m.top.findNode("markUpGridBackgroundWhenUnfocused")
     
     m.leftMarkUpGridList.observeField("itemFocused", "onMarkUpGridIsFocused")
-    ' m.leftMarkUpGridList.observeField("itemUnfocused", "onMarkUpGridIsUnfocused")
     m.leftMarkUpGridList.observeField("itemSelected", "onMarkUpGridSelected")
-
-    ' m.logoutButton.observeField("buttonSelected", "onLogoutButtonSelected")
     m.playButton.observeField("buttonSelected", "onPlayButtonSelected")
 
     setLeftMarkUpGridItems()
-end sub
-
-
-' sub onMarkUpGridIsUnfocused()
-'     print "onMarkUpGridIsUnfocused()"
-'     m.leftMarkUpGridList.itemSize = "[ 50, 50 ]"
-' end sub
-
-sub onMarkUpGridIsFocused()
-    print "onMarkUpGridIsFocused()"
-    ' m.leftMarkUpGridListAnimation.control = "start"
-    'm.leftMarkUpGridList.itemSize = "[ 180, 50 ]"
 end sub
 
 sub onMarkUpGridSelected()
@@ -104,6 +90,7 @@ function onKeyEvent(key as string, press as boolean) as boolean
             '     return true
             if m.leftMarkUpGridList.hasFocus()
                 m.leftMarkUpGridListAnimationWhenUnfocused.control = "start"
+                m.markUpGridBackgroundWhenUnfocused.control = "start"
                 ' m.leftMarkUpGridList.itemSize = "[ 50, 50 ]"
                 m.playButton.setFocus(true)
                 return true
@@ -114,6 +101,7 @@ function onKeyEvent(key as string, press as boolean) as boolean
             '     return true
             if m.playButton.hasFocus()
                 m.leftMarkUpGridListAnimation.control = "start"
+                m.markUpGridBackgroundWhenFocused.control= "start"
                 m.leftMarkUpGridList.setFocus(true)
             end if
         end if
